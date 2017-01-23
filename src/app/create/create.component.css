@@ -1,0 +1,10 @@
+.fp-invalid{
+  font-size: 11px;
+  color: darkred;
+}
+
+.create-box{
+  width:600px;
+  margin:0 auto;
+  padding:100px;
+}

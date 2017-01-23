@@ -1,0 +1,16 @@
+<div class="jumbotron auth-bg">
+  <div class="container">
+    <div class="row auth-container-bg">
+      <div class="col-sm-6 auth-title">
+        <h1>Footprint</h1>
+        <p>Pin your memory on map</p>
+      </div>
+      <div class="col-sm-6">
+        <!--<router-outlet></router-outlet>-->
+        <fp-signup (switchView)="switchView()" *ngIf="this.isSignup" ></fp-signup>
+        <fp-signin (switchView)="switchView()" *ngIf="!this.isSignup" ></fp-signin>
+        <button type='button' class="btn btn-info" (click)="toHome()">Explore without sign up!</button>
+      </div>
+    </div>
+  </div>
+</div>

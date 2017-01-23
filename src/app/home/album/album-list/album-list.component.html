@@ -1,0 +1,4 @@
+<div>
+  <fp-album-item *ngFor="let album of albums" [album]="album" (click)="toUserPage(album.userId, album.albumId)"></fp-album-item>
+  <div class="clear"></div>
+</div>

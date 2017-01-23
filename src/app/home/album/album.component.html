@@ -1,0 +1,40 @@
+<div class="home-box">
+  <!--<div class="home-header">-->
+    <!--<div>-->
+      <!---->
+    <!--</div>-->
+  <!--</div>-->
+  <div class="fp-album-list-container" *ngIf="isSigned()">
+    <div class="fp-album-list-title">
+      <div class="fp-album-title-h3"><h3>My Albums</h3></div>
+      <div class="fp-album-action">
+        <button class="btn btn-success" (click)="newAlbum()">+ New album</button>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <hr class="album-hr">
+    <fp-album-list [type]="0" (noAlbum)="showNoAlbumMsg()"></fp-album-list>
+    <div *ngIf="noAlbum">
+      <div class='album-noalbum-box' (click)="newAlbum()">Click here to create your first Album <span class="glyphicon glyphicon-plus"></span></div>
+    </div>
+  </div>
+  <div class="fp-album-list-container" id="recommend">
+    <div class="fp-album-list-title">
+      <div class="fp-album-recommend-title"><h3>Recommend Albums</h3></div>
+      <div class="fp-album-recommend-search">
+        <form (ngSubmit)="search()" class="navbar-form navbar-left search-form" role="search" >
+          <div class="form-group">
+            <input [(ngModel)]="searchText" type="text" class="form-control search-input" name="text" placeholder="Search">
+          </div>
+          <button type="submit" class="btn btn-info">Search</button>
+        </form>
+      </div>
+      <div class="fp-album-recommend-actions">
+        <button class="btn btn-primary" (click)="allAlbums()" >All albums</button>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <hr class='album-hr'>
+    <fp-album-list [type]="1"></fp-album-list>
+  </div>
+</div>

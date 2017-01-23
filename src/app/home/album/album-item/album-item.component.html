@@ -1,0 +1,15 @@
+<div class="album-item-box">
+  <div class="album-item-image">
+    <div class="thumbnail thumbnail-rewrite" *ngIf="album.images.length>0">
+      <img src="{{album.images[0]?.path}}" />
+    </div>
+    <div class="thumbnail album-noalbum" *ngIf="album.images.length==0">
+      <h3>Empty album</h3>
+    </div>
+  </div>
+  <div class="album-item-info">
+    <h3>{{album.name}}</h3>
+    <p>{{album.description}}</p>
+    <h6>by: {{album.username}}</h6>
+  </div>
+</div>

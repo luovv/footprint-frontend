@@ -1,0 +1,28 @@
+<div class="fp-map-wrapper">
+  <sebm-google-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+    <sebm-google-map-marker
+      [latitude]="album.geo.lat"
+      [longitude]="album.geo.lng"
+      *ngFor="let album of albums"
+      (markerClick)="change(album, infowindow)"
+    >
+      <sebm-google-map-info-window #infowindow [disableAutoPan]="false">
+        <div class="fp-map-info-wrapper">
+          <div class="fp-map-image-wrapper">
+            <div class="fp-map-image" *ngFor="let image of album.images;let i=index">
+              <a href="{{image.path}}"><img *ngIf="i<4" src="{{image.path}}" /></a>
+            </div>
+            <div class="fp-clear"></div>
+          </div>
+          <div class="fp-map-detail-wrapper">
+            <h3>{{album.name}}</h3>
+            <p>{{album.description}}</p>
+            <h6>location: <span>{{album.geo.name}}</span></h6>
+            <p><span class="fp-map-detail-more" (click)="more(album)">more</span></p>
+          </div>
+        </div>
+      </sebm-google-map-info-window>
+    </sebm-google-map-marker>
+  </sebm-google-map>
+</div>
+<!--[iconUrl]="album.images[0].path"-->

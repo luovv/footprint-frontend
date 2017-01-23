@@ -1,0 +1,43 @@
+.fp-nav{
+  margin-bottom: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 150;
+  min-height:32px !important;
+}
+.fp-nav a{
+  font-size: 12px !important;
+  padding:7px;
+  margin:0;
+  height:35px;
+}
+.navbar-brand{
+  color:#f1f1f1;
+}
+
+.nav-myalbums{
+  color:#ccc;
+  cursor: pointer;
+  float: left;
+  height: 35px;
+  padding: 10px 10px;
+  font-size: 12px;
+  line-height: 13px;
+}
+.nav-myalbums:hover{
+  color:#eee;
+}
+.nav-username{
+  color:#ccc;
+  float: left;
+  height: 35px;
+  padding: 10px 10px;
+  font-size: 12px;
+  line-height: 13px;
+}
+.search-form{
+  margin:2px 0 2px 150px;
+}
+.search-input{
+  height:26px;
+}

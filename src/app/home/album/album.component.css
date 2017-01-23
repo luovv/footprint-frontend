@@ -1,0 +1,109 @@
+.fp-album-list-container{
+  padding: 36px 0;
+}
+
+.album-item-box{
+  float: left;
+  width:280px;
+  margin:15px;
+  cursor: pointer;
+  border: 1px #e1e1e1 solid;
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  -ms-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+.album-item-box:hover {
+  border: 1px #ccccff solid;
+}
+.album-item-box:hover .album-item-info {
+  background: #ddddff;
+}
+.album-item-image{
+  width:278px;
+  height:190px;
+  overflow: hidden;
+  border:none;
+  padding:0;
+}
+
+.album-item-info{
+  padding:8px;
+  background-color: #fff;
+  height: 160px;
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  -ms-transition-duration: 0.6s;
+  -o-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+.album-item-info h6{
+  text-align:right;
+  color:#666;
+  font-size: 12px;
+  font-weight: normal;
+}
+.album-item-info h3{
+  margin:5px 0;
+}
+.album-item-info p{
+  height:70px;
+  color:#444;
+  overflow:hidden;
+}
+.home-box{
+  margin-top:50px;
+}
+.clear{
+  clear:both;
+}
+.album-hr{
+  border-color: #ccc;
+}
+.fp-album-action{
+  float:right;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+.fp-album-title-h3{
+  float:left;
+}
+.album-noalbum{
+  width:278px;
+  height: 190px;
+  line-height: 330px;
+  text-align: center;
+}
+
+.album-noalbum-box{
+  border:2px dashed #ccc;
+  padding:15px;
+  color:#666;
+  font-size: 24px;
+  cursor: pointer;
+}
+.album-noalbum-box:hover{
+  border:2px dashed #ff6633;
+  color:#ff6633;
+}
+
+.thumbnail-rewrite{
+  padding: 0;
+  border:none;
+}
+
+.fp-album-recommend-title{
+  float: left;
+}
+.fp-album-recommend-search{
+  float: left;
+}
+.fp-album-recommend-actions{
+  float: right;
+  margin-top:17px;
+  margin-right:10px;
+}
+.search-form{
+  margin:17px 0 0 50px;
+}

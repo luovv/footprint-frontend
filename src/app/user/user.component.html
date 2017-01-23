@@ -1,0 +1,6 @@
+<div class="fp-info-board-wrapper" [style.left]="left">
+  <fp-info-board (close)="close()" (addphoto)="addphoto()" (showImage)="showImageBoard($event)" [album]="currentAlbum"></fp-info-board>
+</div>
+<fp-map [albums]="albums" [albumId]="albumId" (showInfoBoard)="showInfoBoard()" (changeInfo)="changeInfo($event)" ></fp-map>
+<fp-add-photo *ngIf="addPhotoBoard" [album]="currentAlbum" (close)="closeAddBoard()"></fp-add-photo>
+<fp-show-image *ngIf="showImage" [album]="currentAlbum" [image]="clickedImage" (close)="closeImage()"></fp-show-image>

@@ -1,0 +1,17 @@
+<div class="fp-info-close"><span (click)="closeInfoBoard()"><span class="glyphicon glyphicon-remove"></span></span></div>
+<div class="fp-info-header">
+  <h2>{{album?.username}}'s map</h2>
+  <hr style="border-color:#ccc">
+  <h3>{{album?.name}}</h3>
+  <h5>{{album?.description}}</h5>
+</div>
+<div class="fp-info-newimage" *ngIf="isMyAlbum">
+  <button class="btn btn-success btn-sm" (click)="addPhotoBoard()"><span class="glyphicon glyphicon-plus"></span> Add Photo</button>
+  <button class="btn btn-danger btn-sm" (click)="deleteAlbum()"><span class="glyphicon glyphicon-trash"></span> Delete Album</button>
+</div>
+<div class="fp-info-images">
+  <div class="fp-info-images-item" *ngFor="let image of album?.images">
+    <a (click)="showImageBoard(image)"><img src="{{image.path}}"/></a>
+  </div>
+  <div class="fp-clear"></div>
+</div>
